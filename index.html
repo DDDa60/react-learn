@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h2 class="title"></h2>
+	<button class="btn" onclick="change()">切换文字</button>
+
+	<script>
+		let message = 'Hello World!'
+		const t = document.getElementsByClassName('title')[0]
+		t.innerHTML = message
+		// const btn = document.getElementsByClassName('btn')[0]
+		// btn.addEventListener('click', e => {
+		// 	message = 'Hello React!'
+		// 	t.innerHTML = message
+		// })
+
+		// function change () {
+		// 	message = 'hhhhhhhhh'
+		// 	t.innerHTML = message
+		// }
+
+		change = () => {
+				message = 'hhhhhhhhh'
+			t.innerHTML = message
+		}
+		
+
+	</script>
+</body>
+</html>

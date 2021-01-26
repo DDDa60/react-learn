@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>Header</div>
+
+    <div id="app"></div>
+
+    <div>Footer</div>
+
+
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>  
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- 要想在script标签里写jsx语法，必须声明type类型 text/babel -->
+    <script type="text/babel">
+    let message = 'Hello World!'
+    function btnClick () {
+        message = 'Helo Hello React'
+        console.log('Hello React');
+        render()
+    }
+
+
+    function render() {
+        ReactDOM.render(
+            <div>
+                <span>{message}</span> 
+                <button onClick={btnClick}>点击切换</button>
+            </div>,
+            document.getElementById('app')
+        )
+    }
+
+    render()
+        
+    </script>
+</body>
+</html>
